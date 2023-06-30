@@ -229,25 +229,25 @@ for i in range(1,len(t)):
 # =============================================================================       
 # =============================================================================
         # Now we calculate the new function values for u1,u2,u3,u4,u5,u6
-        u1_new = h*((((ns8*Ms8*iH0*ar)/(ne*F))*((np.exp(2*F*(Vg2-EH0)/(R*T))/np.sqrt(fh*s8g2))*(s4g2)
-            - (np.exp(2*F*(EH0-Vg2)/(R*T))/s4g2)*(np.sqrt(fh*s8g2))))
+        u1_new = h*((((ns8*Ms8*iH0*ar)/(ne*F))*((np.exp(2*F*(Vg2-EH0)/(R*T))/np.sqrt(fh*s8g2))*(s4g2)\
+            - (np.exp(2*F*(EH0-Vg2)/(R*T))/s4g2)*(np.sqrt(fh*s8g2))))\
                 - ks*s8g2) - s8g2 + s8[i-1]
         
-        u2_new = h*(((-(ns8*Ms8*iH0*ar)/(ne*F))*((np.exp(2*F*(Vg2-EH0)/(R*T))/np.sqrt(fh*s8g2))*(s4g2)
-            - (np.exp(2*F*(EH0-Vg2)/(R*T))/s4g2)*(np.sqrt(fh*s8g2))))
-                + ks*s8g2 + (((ns4*Ms8*iL0*ar)/(ne*F))*((np.exp(2*F*(Vg2-EL0)/(R*T))/np.sqrt(fl*s4g2))*(np.sqrt(s2g2*(sg2**2)))
+        u2_new = h*(((-(ns8*Ms8*iH0*ar)/(ne*F))*((np.exp(2*F*(Vg2-EH0)/(R*T))/np.sqrt(fh*s8g2))*(s4g2)\
+            - (np.exp(2*F*(EH0-Vg2)/(R*T))/s4g2)*(np.sqrt(fh*s8g2))))\
+                + ks*s8g2 + (((ns4*Ms8*iL0*ar)/(ne*F))*((np.exp(2*F*(Vg2-EL0)/(R*T))/np.sqrt(fl*s4g2))*(np.sqrt(s2g2*(sg2**2)))\
                     - (np.exp(2*F*(EL0-Vg2)/(R*T))/(np.sqrt(s2g2*(sg2**2))))*(np.sqrt(fl*s4g2))))) - s4g2 + s4[i-1]
         
-        u3_new = h*(((-(ns2*Ms8*iL0*ar)/(ne*F))*((np.exp(2*F*(Vg2-EL0)/(R*T))/np.sqrt(fl*s4g2))*(np.sqrt(s2g2*(sg2**2)))
+        u3_new = h*(((-(ns2*Ms8*iL0*ar)/(ne*F))*((np.exp(2*F*(Vg2-EL0)/(R*T))/np.sqrt(fl*s4g2))*(np.sqrt(s2g2*(sg2**2)))\
             - (np.exp(2*F*(EL0-Vg2)/(R*T))/(np.sqrt(s2g2*(sg2**2))))*(np.sqrt(fl*s4g2))))) - s2g2 + s2[i-1]
         
-        u4_new = h*((-2*((ns*Ms8*iL0*ar)/(ne*F))*((np.exp(2*F*(Vg2-EL0)/(R*T))/np.sqrt(fl*s4g2))*(np.sqrt(s2g2*(sg2**2)))
-            - (np.exp(2*F*(EL0-Vg2)/(R*T))/(np.sqrt(s2g2*(sg2**2))))*(np.sqrt(fl*s4g2))))
+        u4_new = h*((-2*((ns*Ms8*iL0*ar)/(ne*F))*((np.exp(2*F*(Vg2-EL0)/(R*T))/np.sqrt(fl*s4g2))*(np.sqrt(s2g2*(sg2**2)))\
+            - (np.exp(2*F*(EL0-Vg2)/(R*T))/(np.sqrt(s2g2*(sg2**2))))*(np.sqrt(fl*s4g2))))\
                 - ((kp*spg2)/(v*ps))*(sg2 - s_sat)) - sg2 + s[i-1]
         
-        u5_new = I + iH0*ar*((np.exp(2*F*(Vg2-EH0)/(R*T))/np.sqrt(fh*s8g2))*(s4g2)
-            - (np.exp(2*F*(EH0-Vg2)/(R*T))/s4g2)*(np.sqrt(fh*s8g2))) 
-        + iL0*ar*((np.exp(2*F*(Vg2-EL0)/(R*T))/np.sqrt(fl*s4g2))*(np.sqrt(s2g2*(sg2**2)))
+        u5_new = I + iH0*ar*((np.exp(2*F*(Vg2-EH0)/(R*T))/np.sqrt(fh*s8g2))*(s4g2)\
+            - (np.exp(2*F*(EH0-Vg2)/(R*T))/s4g2)*(np.sqrt(fh*s8g2)))\
+        + iL0*ar*((np.exp(2*F*(Vg2-EL0)/(R*T))/np.sqrt(fl*s4g2))*(np.sqrt(s2g2*(sg2**2)))\
             - (np.exp(2*F*(EL0-Vg2)/(R*T))/(np.sqrt(s2g2*(sg2**2))))*(np.sqrt(fl*s4g2)))
         
         u6_new = ((h*kp*spg2)/(v*ps))*(sg2 - s_sat) - spg2 + sp[i-1]
