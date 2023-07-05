@@ -422,3 +422,11 @@ def LiS_Solver(s8i, s4i, s2i, si, Vi, spi,
         
             return(var_array)
             break
+        
+        elif (t[-1] >= t_end):
+            print("The time taken for completion :", timeit.default_timer() - start, "s")
+            print("Solved array returned in the form: [s8_array, s4_array, s2_array, s_array, V_array, sp_array, time_array]")
+            var_array = np.array([s8, s4, s2, s, V, sp, t])
+        
+            return(var_array)
+            break
