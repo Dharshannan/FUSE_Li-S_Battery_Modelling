@@ -376,7 +376,10 @@ def LiS_Solver(s8i, s4i, s2i, si, Vi, spi,
                 s4.append(new_val[1])
                 s2.append(new_val[2])
                 s.append(new_val[3])
-                V.append(min(new_val[4],2.43027748))
+                if state == 'Discharge':
+                    V.append(min(new_val[4],V[0]))
+                elif state == 'Charge':
+                    V.append(max(new_val[4],V[0]))
                 sp.append(new_val[5])
                 break
             else:
@@ -385,7 +388,10 @@ def LiS_Solver(s8i, s4i, s2i, si, Vi, spi,
                 s4guess = new_val[1] + correction_val
                 s2guess = new_val[2] + correction_val
                 sguess = new_val[3] + correction_val
-                Vguess = min(new_val[4],2.43027748)  + correction_val
+                if state == 'Discharge':
+                    Vguess = min(new_val[4],V[0])  + correction_val
+                elif state == 'Charge':
+                    Vguess = max(new_val[4],V[0])  + correction_val
                 spguess = new_val[5] + correction_val
 
         b = b + 1
