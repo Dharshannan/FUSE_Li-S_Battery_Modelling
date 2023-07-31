@@ -140,9 +140,6 @@ def gradient_descent(init_kp, init_EL0, delta_kp, delta_EL0, learning_rate, epoc
     EL0 = init_EL0
     # Start epoch iterations
     for i in range(epoch):
-        # =============================================================================
-        ## calculate cost for kp + delta_kp
-        # =============================================================================
         ## Define array containing all new parameter values
         params_sub = [(kp + delta_kp, EL0), (kp - delta_kp, EL0), (kp, EL0 + delta_EL0), (kp, EL0 - delta_EL0)]
         # Run the simulation in parallel using joblib (improves run time significantly)
