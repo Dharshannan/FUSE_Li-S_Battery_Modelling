@@ -1,6 +1,7 @@
 ## SCRIPT DESCRIPTIONS HERE ##
 ```func.py```
   - This script contains the defined symbols and discretized equations, including some helper functions to define the function arrays and jacobian matrix.
+
 ```LiS_Backtrack_Solver.py```
   - This script contains the LiS_Model calss variable and the solver function, the only change that needs to be made here is to include all the defined/changed parameters into the __init function of the LiS_Model class.
 ```module_func.py```
