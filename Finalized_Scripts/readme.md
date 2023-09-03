@@ -3,7 +3,7 @@
   - This script contains the defined symbols and discretized equations, including some helper functions to define the function arrays and jacobian matrix.
 
 ```LiS_Backtrack_Solver.py```
-  - This script contains the LiS_Model calss variable and the solver function, the only change that needs to be made here is to include all the defined/changedparameters into the __init function of the LiS_Model class.
+  - This script contains the ```LiS_Model()``` calss variable and the solver function ```LiS_Solver()```, the only change that needs to be made here is to include all the defined/changed parameters into the ```__init()``` function of the ```LiS_Model()``` class.
 
 ```module_func.py```
   - This script contains 2 functions namely the ```labels()``` function which creates a dictionary to allow access to each cycle charge and discharge variable values and the ```concatenate()``` function which allows the user to combine values for a single variable over the whole microcycling period.
