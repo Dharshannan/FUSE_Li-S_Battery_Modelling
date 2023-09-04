@@ -10,8 +10,8 @@ This repository will contain the numerical code for modelling Li-S batteries (WI
  ![Base_Image](gifs/Adaptive_Step_Size_Model.png)
 
 
-* The Parameter Backtracking model solver code flow is given below:
- ![Base_Image](gifs/Backtracking_Model.png)
+* The Optimized Parameter Backtracking model solver code flow is given below:
+ ![Base_Image](gifs/Latest_Model_(20_08_2023)_New.png)
 
 
 * Mathematical formulation of the model is as below (This was based on an older 2016 Mathematical formulation):
